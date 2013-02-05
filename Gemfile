@@ -6,11 +6,13 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'factory_girl_rails'
 
 group :development do
   gem 'rb-fsevent'
   gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 # Gems used only for assets and not required
