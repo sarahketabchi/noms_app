@@ -13,5 +13,23 @@ describe Ingredient do
   it { should respond_to(:measurement_id) }
   it { should respond_to(:amount) }
 
-  it{ should be_valid }
+  it { should be_valid }
+
+  describe "is not valid" do
+    specify "when recipe_id is not present" do
+      subject.recipe_id = nil
+      subject.should_not be_valid
+    end
+
+    specify "when item_id is not present" do
+      subject.item_id = nil
+      subject.should_not be_valid
+    end
+
+    specify "when measurement_id is not present" do
+      subject.measurement_id = nil
+      subject.should_not be_valid
+    end
+  end
+
 end
