@@ -12,6 +12,8 @@ describe Recipe do
   it { should respond_to(:name) }
   it { should respond_to(:description) }
   it { should respond_to(:rating) }
+  it { should respond_to(:ingredients) }
+  it { should respond_to(:items) }
 
   it { should be_valid }
 end
