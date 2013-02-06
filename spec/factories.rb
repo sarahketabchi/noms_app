@@ -15,7 +15,7 @@ FactoryGirl.define do
 
   # Missing it's recipe
   factory :incomplete_ingredient do
-    amount: 5
+    amount 5
     association :measurement, factory: :measurement
     association :item, factory: :item
   end
