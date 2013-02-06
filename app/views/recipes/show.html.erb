@@ -1,0 +1,16 @@
+<h1><%= @recipe.name %></h1>
+
+<% if @recipe.rating.nil? %>
+  no rating yet
+<% else %>
+  <%= "#{@recipe.rating} stars" %>
+<% end %>
+<br>
+<%= @recipe.description %>
+<br>
+<br>
+Ingredients:
+<%= render @recipe.ingredients %>
+
+<br><br>
+<%= link_to "Add an Ingredient", new_recipe_ingredient_path(@recipe) %>

@@ -1,0 +1,10 @@
+<% if @ingredient.errors.any? %>
+  <%#= pluralize(@ingredient.errors.count, "Error") %>
+  <%= @ingredient.errors.count == 1? "Error" : "Errors" %>
+
+  <ul>
+    <% @ingredient.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>

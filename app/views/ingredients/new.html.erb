@@ -1,6 +1,8 @@
 <h1>New Ingredient</h1>
 
-<%= form_for(@ingredient) do |f| %>
+<%= form_for([@recipe, @ingredient]) do |f| %>
+  <%= render 'shared/error_message' %>
+
   <%= f.label :amount %>
   <%= f.text_field :amount %>
 
@@ -12,3 +14,4 @@
 
   <%= f.submit "Submit Ingredient" %>
 <% end %>
+

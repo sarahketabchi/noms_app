@@ -6,5 +6,5 @@ class Ingredient < ActiveRecord::Base
   attr_accessible :amount, :item_id, :item, :measurement_id,
                   :measurement, :recipe_id, :recipe
 
-  validates :item_id, :measurement_id, :recipe_id, :presence => true
+  validates :item_id, :measurement_id, :recipe_id, :amount, :presence => true
 end
