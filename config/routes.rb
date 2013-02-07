@@ -1,7 +1,6 @@
 NomsApp::Application.routes.draw do
-  resources :recipes do
-    resources :ingredients
-  end
+  resources :recipes
+  resources :ingredients
   resources :measurements
   resources :items
   # The priority is based upon order of creation:
