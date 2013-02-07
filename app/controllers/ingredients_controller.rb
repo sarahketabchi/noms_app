@@ -10,6 +10,7 @@ class IngredientsController < ApplicationController
     if @ingredient.save
       redirect_to @ingredient.recipe
     else
+      @recipe = Recipe.find(@ingredient.recipe)
       render 'new'
     end
   end

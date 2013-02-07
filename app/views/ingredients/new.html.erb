@@ -1,4 +1,4 @@
-<h1>New Ingredient</h1>
+<h1>Add a New Ingredient to <%= link_to @recipe.name, recipe_path(@recipe) %></h1>
 
 <%= form_for(@ingredient) do |f| %>
   <%= render 'shared/error_message' %>
