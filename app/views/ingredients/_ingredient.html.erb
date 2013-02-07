@@ -1,2 +1,3 @@
 <br>
 <%= "#{ingredient.amount} #{ingredient.measurement.name} #{ingredient.item.name}" %>
+<%= link_to "<i class='icon-trash'></i>".html_safe, ingredient_path(ingredient), :method => :delete, data: { confirm: "You sure?" } %>
