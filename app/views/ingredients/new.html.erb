@@ -2,18 +2,25 @@
 
 <%= form_for(@ingredient) do |f| %>
   <%= render 'shared/error_message' %>
+  <p>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </p>
 
-  <%= f.label :amount %>
-  <%= f.text_field :amount %>
+  <p>
+    <%= f.label :measurement_id, "Measurement" %>
+    <%= f.select :measurement_id, Measurement.all.map { |m| [m.name, m.id] } %>
+  </p>
 
-  <%= f.label :measurement_id, "Measurement" %>
-  <%= f.select :measurement_id, Measurement.all.map { |m| [m.name, m.id] } %>
-
-  <%= f.label :item_id, "Item" %>
-  <%= f.select :item_id, Item.all.map { |i| [i.name, i.id] } %>
+  <p>
+    <%= f.label :item_id, "Item" %>
+    <%= f.select :item_id, Item.all.map { |i| [i.name, i.id] } %>
+  </p>
 
   <%= f.hidden_field :recipe_id %>
 
-  <%= f.submit "Submit Ingredient" %>
+  <p>
+    <%= f.submit "Submit Ingredient", :class => 'btn' %>
+  </p>
 <% end %>
 

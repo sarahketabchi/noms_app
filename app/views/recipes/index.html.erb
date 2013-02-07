@@ -4,7 +4,10 @@
   <% @recipes.each do |recipe| %>
     <li>
       <%= link_to recipe.name, recipe_path(recipe) %>
+      <%= link_to "<i class='icon-trash'></i>".html_safe, recipe_path(recipe), :method => :delete, data: { confirm: "You sure?" } %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Add a new recipe!", new_recipe_path, :class => "btn btn-primary" %>
 

@@ -9,8 +9,8 @@
 <%= @recipe.description %>
 <br>
 <br>
-Ingredients:
+<strong>Ingredients:</strong>
 <%= render @recipe.ingredients %>
 
 <br><br>
-<%= link_to "Add an Ingredient", new_ingredient_path(:recipe_id => @recipe.id) %>
+<%= link_to "Add an Ingredient", new_ingredient_path(:recipe_id => @recipe.id), :class => 'btn btn-primary' %>
